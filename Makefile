@@ -16,7 +16,7 @@ run-dist:
 	./build/install/java-package/bin/java-package
 
 run:
-	./gradlew run
+	./app/gradlew run
 
 test:
 	./gradlew test
