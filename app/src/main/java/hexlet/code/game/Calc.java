@@ -7,15 +7,15 @@ public class Calc {
     static final int OPERATION_RANGE = 3;
     static final int NUMBER_RANGE = 20;
     static final char[] OPERATIONS = new char[]{'+', '*', '-'};
-    static String[][] data = new String[3][2];
-
+    private static String[][] data = new String[3][2];
+    static final int numberGames = 3;
     public Calc() {
     }
 
     public static void game() {
         Engine.start(RULES_GAME);
 
-        for (int i = 0; i < 3; ++i) {
+        for (int i = 0; i < numberGames; ++i) {
             int randomNum1 = (int) (Math.random() * NUMBER_RANGE);
             int randomNum2 = (int) (Math.random() * NUMBER_RANGE);
             int randomOperation = (int) (Math.random() * OPERATION_RANGE);

@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Engine {
     static final int QUANTITY_ATTEMPTS = 3;
-    public static String userName;
+    private static String userName;
 
     public Engine() {
     }

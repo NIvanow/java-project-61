@@ -10,8 +10,8 @@ import hexlet.code.game.Progression;
 
 import java.util.Scanner;
 
-public class app {
-    public static String choice;
+public class App {
+    private static String choice;
 
     public static void main(String[] args) {
         System.out.println("Please enter the game number and press Enter. \n1 - Greet\n2 - Even"
