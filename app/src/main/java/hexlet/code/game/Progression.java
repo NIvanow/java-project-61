@@ -6,7 +6,7 @@ public class Progression {
     static final String RULES_GAME = "What number is missing in the progression?";
     static final int STEP_INTERVAL = 5;
     static final int NUMBER_RANGE = 20;
-    static final int numberGames = 3;
+    static final int NUMBER_GAMES = 3;
     private static String[][] data = new String[3][2];
 
     public Progression() {
@@ -15,7 +15,7 @@ public class Progression {
     public static void game() {
         Engine.start(RULES_GAME);
 
-        for (int i = 0; i < numberGames; ++i) {
+        for (int i = 0; i < NUMBER_GAMES; ++i) {
             String[] numbers = randomProgression();
             int position = (int) (Math.random() * (double) numbers.length);
             String requiredNumber = numbers[position];

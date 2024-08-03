@@ -8,14 +8,14 @@ public class Calc {
     static final int NUMBER_RANGE = 20;
     static final char[] OPERATIONS = new char[]{'+', '*', '-'};
     private static String[][] data = new String[3][2];
-    static final int numberGames = 3;
+    static final int NUMBER_GAMES = 3;
     public Calc() {
     }
 
     public static void game() {
         Engine.start(RULES_GAME);
 
-        for (int i = 0; i < numberGames; ++i) {
+        for (int i = 0; i < NUMBER_GAMES; ++i) {
             int randomNum1 = (int) (Math.random() * NUMBER_RANGE);
             int randomNum2 = (int) (Math.random() * NUMBER_RANGE);
             int randomOperation = (int) (Math.random() * OPERATION_RANGE);
