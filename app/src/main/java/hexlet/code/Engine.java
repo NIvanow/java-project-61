@@ -28,7 +28,7 @@ public class Engine {
             String choiceEvenStr = choiceEven.next();
             if (!dataGame[i][1].equals(choiceEvenStr)) {
                 System.out.println("'" + choiceEvenStr + "' is wrong answer ;(. Correct answer was '"
-                        + dataGame[i][1] + "'\nLet's try again, " + userName);
+                        + dataGame[i][1] + "'\nLet's try again, " + userName + "!");
                 break;
             }
 
