@@ -16,10 +16,10 @@ run-dist:
 	./build/install/java-package/bin/java-package
 
 run:
-	./app/gradlew run
+	./gradlew run
 
 test:
-	./app/gradlew test
+	./gradlew test
 
 report:
 	./gradlew jacocoTestReport
