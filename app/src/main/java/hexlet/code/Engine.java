@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Engine {
     static final int QUANTITY_ATTEMPTS = 3;
     private static String userName;
-
+    static final int NUMBER_GAMES = 3;
     public Engine() {
     }
 
@@ -21,7 +21,7 @@ public class Engine {
     public static void resultGame(String[][] dataGame) {
         int count = 0;
 
-        for (int i = 0; i < 3; ++i) {
+        for (int i = 0; i < NUMBER_GAMES; ++i) {
             System.out.println(dataGame[i][0]);
             System.out.print("Your answer: ");
             Scanner choiceEven = new Scanner(System.in);
@@ -36,7 +36,7 @@ public class Engine {
             ++count;
         }
 
-        if (count == 3) {
+        if (count == NUMBER_GAMES) {
             System.out.println("Congratulations, " + userName + "!");
         }
 

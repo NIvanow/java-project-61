@@ -7,8 +7,11 @@ public class Calc {
     static final int OPERATION_RANGE = 3;
     static final int NUMBER_RANGE = 20;
     static final char[] OPERATIONS = new char[]{'+', '*', '-'};
-    private static String[][] data = new String[3][2];
+    static final int DATA_NUMBER = 2;
     static final int NUMBER_GAMES = 3;
+    private static String[][] data = new String[NUMBER_GAMES][DATA_NUMBER];
+
+
     public Calc() {
     }
 

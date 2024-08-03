@@ -6,7 +6,8 @@ public class Even {
     static final String RULES_GAME = "Answer 'yes' if the number is even, otherwise answer 'no'.";
     static final int NUMBER_RANGE = 20;
     static final int NUMBER_GAMES = 3;
-    private static String[][] data = new String[3][2];
+    static final int DATA_NUMBER = 2;
+    private static String[][] data = new String[NUMBER_GAMES][DATA_NUMBER];
 
     public Even() {
     }
