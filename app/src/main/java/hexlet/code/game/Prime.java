@@ -9,7 +9,7 @@ public class Prime {
 
     public static void game() {
         for (int i = 0; i < Engine.NUMBER_GAMES; i++) {
-            int randomNum = Utils.randomNum(100);
+            int randomNum = Utils.randomNum();
 
             data[i][0] = "Question: " + randomNum;
             data[i][1] = isPrime(randomNum) ?  "yes" : "no";

@@ -6,13 +6,14 @@ import hexlet.code.Utils;
 public class Calc {
     static final String RULES_GAME = "What is the result of the expression?";
     static final char[] OPERATIONS = new char[] {'+', '*', '-'};
+    static final int RANGE_OF_OPERATION = 3;
     private static String[][] data = new String[Engine.NUMBER_GAMES][2];
 
     public static void game() {
         for (int i = 0; i < Engine.NUMBER_GAMES; ++i) {
-            int randomNum1 = Utils.randomNum(20);
-            int randomNum2 = Utils.randomNum(20);
-            int randomOperation = Utils.randomNum(3);
+            int randomNum1 = Utils.randomNum();
+            int randomNum2 = Utils.randomNum();
+            int randomOperation = Utils.randomNum(RANGE_OF_OPERATION);
             char operation = OPERATIONS[randomOperation];
             data[i][0] = "Question: " + randomNum1 + " " + operation + " " + randomNum2;
             data[i][1] = Integer.toString(calculate(randomNum1, randomNum2, operation));

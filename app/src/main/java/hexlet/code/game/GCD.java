@@ -9,8 +9,8 @@ public class GCD {
 
     public static void game() {
         for (int i = 0; i < Engine.NUMBER_GAMES; ++i) {
-            int randomNum1 = Utils.randomNum(20);
-            int randomNum2 = Utils.randomNum(20);
+            int randomNum1 = Utils.randomNum();
+            int randomNum2 = Utils.randomNum();
             data[i][0] = "Question: " + randomNum1 + " " + randomNum2;
             data[i][1] = Integer.toString(logicGCD(randomNum1, randomNum2));
         }

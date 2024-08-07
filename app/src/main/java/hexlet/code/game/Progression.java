@@ -22,8 +22,8 @@ public class Progression {
 
     public static String[] randomProgression() {
         String[] numbers = new String[Utils.randomNum(STEP_INTERVAL) + STEP_INTERVAL];
-        int randomFirsNumber = Utils.randomNum(20);
-        int randomStep = Utils.randomNum(20);
+        int randomFirsNumber = Utils.randomNum();
+        int randomStep = Utils.randomNum();
         numbers[0] = Integer.toString(randomFirsNumber);
 
         for (int i = 1; i < numbers.length; i++) {

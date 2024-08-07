@@ -9,7 +9,7 @@ public class Even {
 
     public static void game() {
         for (int i = 0; i < Engine.NUMBER_GAMES; ++i) {
-            int randomNum = Utils.randomNum(20);
+            int randomNum = Utils.randomNum();
             data[i][0] = "Question: " + randomNum;
             data[i][1] = isEven(randomNum) ? "yes" : "no";
         }
