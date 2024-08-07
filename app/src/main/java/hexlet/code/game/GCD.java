@@ -1,46 +1,36 @@
 package hexlet.code.game;
 
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 public class GCD {
     static final String RULES_GAME = "Find the greatest common divisor of given numbers.";
-    static final int NUMBER_RANGE = 20;
-    static final int NUMBER_GAMES = 3;
-    static final int DATA_NUMBER = 2;
-    private static String[][] data = new String[NUMBER_GAMES][DATA_NUMBER];
-
-    public GCD() {
-    }
+    private static String[][] data = new String[Engine.NUMBER_GAMES][2];
 
     public static void game() {
-        Engine.start(RULES_GAME);
-
-        for (int i = 0; i < NUMBER_GAMES; ++i) {
-            int randomNum1 = (int) (Math.random() * NUMBER_RANGE);
-            int randomNum2 = (int) (Math.random() * NUMBER_RANGE);
-            data[i][0] = question(randomNum1, randomNum2);
-            data[i][1] = logicGCD(randomNum1, randomNum2);
+        for (int i = 0; i < Engine.NUMBER_GAMES; ++i) {
+            int randomNum1 = Utils.randomNum(20);
+            int randomNum2 = Utils.randomNum(20);
+            data[i][0] = "Question: " + randomNum1 + " " + randomNum2;
+            data[i][1] = Integer.toString(logicGCD(randomNum1, randomNum2));
         }
-
-        Engine.resultGame(data);
+        Engine.start(RULES_GAME, data);
     }
 
-    public static String question(int num1, int num2) {
-        return "Question: " + num1 + " " + num2;
-    }
-
-    public static String logicGCD(int num1, int num2) {
-        String result = "1";
+    public static int logicGCD(int num1, int num2) {
+        if (num1 == num2 && num1 == 0) {
+            return 0;
+        }
+        int result = 1;
         int maxNum = Math.max(num1, num2);
         int maxResult = 1;
 
-        for (int i = maxNum; i > 1; --i) {
+        for (int i = maxNum; i > 1; i--) {
             if (num1 % i == 0 && num2 % i == 0 && maxResult < i) {
-                result = Integer.toString(i);
+                result = i;
                 maxResult = i;
             }
         }
-
         return result;
     }
 }

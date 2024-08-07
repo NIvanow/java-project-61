@@ -3,22 +3,17 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Engine {
-    static final int QUANTITY_ATTEMPTS = 3;
-    private static String userName;
-    static final int NUMBER_GAMES = 3;
-    public Engine() {
-    }
+    public static final int NUMBER_GAMES = 3;
 
-    public static void start(String str) {
+    public static void start(String str, String[][] dataGame) {
+        String userName;
         System.out.println("Welcome to the Brain Games!");
         System.out.print("May I have your name? ");
         Scanner name = new Scanner(System.in);
         userName = name.next();
         System.out.println("Hello, " + userName + "!");
         System.out.println(str);
-    }
 
-    public static void resultGame(String[][] dataGame) {
         int count = 0;
 
         for (int i = 0; i < NUMBER_GAMES; ++i) {
@@ -39,9 +34,5 @@ public class Engine {
         if (count == NUMBER_GAMES) {
             System.out.println("Congratulations, " + userName + "!");
         }
-
-    }
-
-    public static void questionForUser(String[][] dataGame) {
     }
 }

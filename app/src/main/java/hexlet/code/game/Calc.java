@@ -1,50 +1,31 @@
 package hexlet.code.game;
 
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 public class Calc {
     static final String RULES_GAME = "What is the result of the expression?";
-    static final int OPERATION_RANGE = 3;
-    static final int NUMBER_RANGE = 20;
-    static final char[] OPERATIONS = new char[]{'+', '*', '-'};
-    static final int DATA_NUMBER = 2;
-    static final int NUMBER_GAMES = 3;
-    private static String[][] data = new String[NUMBER_GAMES][DATA_NUMBER];
-
-
-    public Calc() {
-    }
+    static final char[] OPERATIONS = new char[] {'+', '*', '-'};
+    private static String[][] data = new String[Engine.NUMBER_GAMES][2];
 
     public static void game() {
-        Engine.start(RULES_GAME);
-
-        for (int i = 0; i < NUMBER_GAMES; ++i) {
-            int randomNum1 = (int) (Math.random() * NUMBER_RANGE);
-            int randomNum2 = (int) (Math.random() * NUMBER_RANGE);
-            int randomOperation = (int) (Math.random() * OPERATION_RANGE);
+        for (int i = 0; i < Engine.NUMBER_GAMES; ++i) {
+            int randomNum1 = Utils.randomNum(20);
+            int randomNum2 = Utils.randomNum(20);
+            int randomOperation = Utils.randomNum(3);
             char operation = OPERATIONS[randomOperation];
-            data[i][0] = question(randomNum1, randomNum2, operation);
-            data[i][1] = calculate(randomNum1, randomNum2, operation);
+            data[i][0] = "Question: " + randomNum1 + " " + operation + " " + randomNum2;
+            data[i][1] = Integer.toString(calculate(randomNum1, randomNum2, operation));
         }
-
-        Engine.resultGame(data);
+        Engine.start(RULES_GAME, data);
     }
 
-    public static String question(int num1, int num2, char operation) {
-        return "Question: " + num1 + " " + operation + " " + num2;
-    }
-
-    public static String calculate(int num1, int num2, char operation) {
-        switch (operation) {
-            case '*':
-                return Integer.toString(num1 * num2);
-            case '+':
-                return Integer.toString(num1 + num2);
-            case ',':
-            default:
-                return "Error data";
-            case '-':
-                return Integer.toString(num1 - num2);
-        }
+    public static int calculate(int num1, int num2, char operation) {
+        return switch (operation) {
+            case '*' -> num1 * num2;
+            case '+' -> num1 + num2;
+            case '-' -> num1 - num2;
+            default -> 0;
+        };
     }
 }
