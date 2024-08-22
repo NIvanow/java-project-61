@@ -5,9 +5,9 @@ import hexlet.code.Utils;
 
 public class GCD {
     static final String RULES_GAME = "Find the greatest common divisor of given numbers.";
-    private static String[][] data = new String[Engine.NUMBER_GAMES][2];
 
     public static void game() {
+        String[][] data = new String[Engine.NUMBER_GAMES][2];
         for (int i = 0; i < Engine.NUMBER_GAMES; ++i) {
             int randomNum1 = Utils.randomNum();
             int randomNum2 = Utils.randomNum();
@@ -17,7 +17,7 @@ public class GCD {
         Engine.start(RULES_GAME, data);
     }
 
-    public static int logicGCD(int num1, int num2) {
+    private static int logicGCD(int num1, int num2) {
         if (num1 == num2 && num1 == 0) {
             return 0;
         }

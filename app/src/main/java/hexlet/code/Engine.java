@@ -14,8 +14,6 @@ public class Engine {
         System.out.println("Hello, " + userName + "!");
         System.out.println(str);
 
-        int count = 0;
-
         for (int i = 0; i < NUMBER_GAMES; ++i) {
             System.out.println(dataGame[i][0]);
             System.out.print("Your answer: ");
@@ -24,15 +22,12 @@ public class Engine {
             if (!dataGame[i][1].equals(choiceEvenStr)) {
                 System.out.println("'" + choiceEvenStr + "' is wrong answer ;(. Correct answer was '"
                         + dataGame[i][1] + "'\nLet's try again, " + userName + "!");
-                break;
+                return;
             }
-
             System.out.println("Correct!");
-            ++count;
         }
 
-        if (count == NUMBER_GAMES) {
-            System.out.println("Congratulations, " + userName + "!");
-        }
+        System.out.println("Congratulations, " + userName + "!");
+
     }
 }
