@@ -1,4 +1,4 @@
-###Games of mind
+<h1>Games of mind</h1>
 
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/NIvanow/java-project-61/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/NIvanow/java-project-61/actions)
@@ -12,7 +12,7 @@ The programm is a collection of 5 games:
  <br/> -Definition of prime number (Prime game).
  
 
-To run the program on the command line, go to the directory with the program and enter the command ./gradlew run. (Requires Gradle version 8.5 or higher installed)
+To run the program on the command line, go to the directory with the program and enter the command ./gradlew run. (Requires Gradle version 8.5 or higher installed).
 
 Demonstration Even game
 
