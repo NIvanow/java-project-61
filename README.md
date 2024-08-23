@@ -1,11 +1,11 @@
-####Games of mind
+Games of mind
 
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/NIvanow/java-project-61/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/NIvanow/java-project-61/actions)
 [![Maintainability](https://api.codeclimate.com/v1/badges/6b06a7c6fce809d59d19/maintainability)](https://codeclimate.com/github/NIvanow/java-project-61/maintainability)
 
 The programm is a collection of 5 games: 
- <br/> -Determining the parity of a number (Even game).</h2>h2> 
+ <br/> -Determining the parity of a number (Even game). 
  <br/> -Two numbers calculator (Calc game). 
  <br/> -Finding GCD (GCD game). 
  <br/> -Finding the missing number in progression (Progression game). 
